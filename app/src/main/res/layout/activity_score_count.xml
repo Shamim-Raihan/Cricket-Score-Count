@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackgroundColor"
+    tools:context=".view.ui.ScoreCountActivity">
+
+    <TextView
+        android:id="@+id/topText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Live Score"
+        android:textColor="@color/textColorWhite"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/topText"
+        android:layout_marginTop="20dp"
+        android:background="#732DD9"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:background="@drawable/score_section_design"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/team1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="team 1"
+                android:textColor="@color/textColorBlack"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_toRightOf="@id/team1"
+                android:text="V"
+                android:textColor="@color/textColorBlack"
+                android:textSize="8sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/ver"
+                android:background="@drawable/second_team_score_design"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/team2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:text="team 2"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/totalRunId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="210"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:text="-"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/teamWicketId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12dp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  -  "
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/totalOverId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.5"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/comparisonLayoutId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/runNeededId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/run_design"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="75"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:text="Runs needed"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12dp"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="in"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/remainBallId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="@drawable/run_design"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="100"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balls"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Required run rate : "
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/requiredRunRateId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.5"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/thisOverLayoutId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="This Over"
+                android:textColor="@color/textColorWhite"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/thisOverId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text=""
+                android:textColor="@color/textColorWhite"
+                android:textSize="12dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current run rate : "
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/currentRunRateId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 0.0"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="8dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomBar"
+        android:layout_below="@id/topBar"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Score Counter"
+            android:textColor="@color/textColorWhite"
+            android:textSize="20sp" />
+
+
+        <LinearLayout
+            android:id="@+id/run_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="70dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30dp"
+                android:text="Run"
+                android:textColor="@color/textColorWhite"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/runOneId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/run_selector_design"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/runTwoId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/run_selector_design"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/runThreeId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/run_selector_design"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/runFourId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/run_selector_design"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="25dp" />
+
+
+                <TextView
+                    android:id="@+id/runSixId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/run_selector_design"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="25dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/extra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/run_section"
+            android:layout_marginTop="70dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="18dp"
+                android:text="Extra"
+                android:textColor="@color/textColorWhite"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+
+                <TextView
+                    android:id="@+id/wdId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/run_selector_design"
+                    android:gravity="center"
+                    android:text="wd"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/nbId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/run_selector_design"
+                    android:gravity="center"
+                    android:text="nb"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/extra"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="100dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/noRunId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/run_selector_design"
+                android:gravity="center"
+                android:text="No Run"
+                android:textColor="@color/textColorWhite"
+                android:textSize="25dp"
+
+                />
+
+            <TextView
+                android:id="@+id/wicketId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/run_selector_design"
+                android:gravity="center"
+                android:text="Wicket"
+                android:textColor="@color/textColorWhite"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:padding="10dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/previousBtnId"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play_button_design"
+            android:drawableLeft="@drawable/back_send"
+            android:letterSpacing=".1"
+            android:text="Previous Ball"
+            android:textAllCaps="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="12sp"
+            android:layout_marginRight="10dp"
+            />
+
+        <Button
+            android:id="@+id/historyBtnId"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play_button_design"
+            android:drawableRight="@drawable/history_icon"
+            android:letterSpacing=".1"
+            android:text="History"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <Button
+            android:id="@+id/nextBallId"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/play_button_design"
+            android:drawableRight="@drawable/send"
+            android:letterSpacing=".1"
+            android:text="Next Ball"
+            android:textAllCaps="false"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

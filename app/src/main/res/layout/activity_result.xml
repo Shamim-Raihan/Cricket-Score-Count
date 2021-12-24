@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackgroundColor"
+    tools:context=".view.ui.ResultActivity">
+
+
+    <TextView
+        android:id="@+id/congratulationsId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="Congratulations !"
+        android:textColor="@color/textColorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/resultId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/congratulationsId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Team SR won by 6 wicket"
+        android:textColor="@color/textColorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/textId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:text="Final Score Board"
+        android:textColor="@color/textColorWhite"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textId"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/final_result_design">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/devider" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/team1RunWicketResultId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AB (218-10)"
+                android:textColor="@color/textColorBlack"
+                android:textSize="20sp"
+
+                />
+
+            <TextView
+                android:id="@+id/team1OverResultId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="over - 10"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginRight="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/team2RunWicketResultId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SB (218-10)"
+                android:textColor="@color/textColorBlack"
+                android:textSize="20sp"
+
+                />
+
+            <TextView
+                android:id="@+id/team2OverResultId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="over - 9.5"
+                android:textColor="@color/textColorBlack"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        >
+
+        <Button
+            android:id="@+id/nextMatchId"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/play_button_design"
+            android:drawableLeft="@drawable/back_send"
+            android:paddingLeft="25dp"
+
+
+            android:paddingRight="25dp"
+            android:text="Next Match"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/exitAppId"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/play_button_design"
+            android:drawableRight="@drawable/exit"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Exit App"
+            android:textAllCaps="false" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

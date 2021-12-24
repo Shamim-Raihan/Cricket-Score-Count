@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/mainBackgroundColor"
+    android:padding="100dp"
+    tools:context=".view.ui.TossActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Which team will bat first"
+        android:textColor="@color/textColorWhite"
+        android:textSize="18sp"
+        />
+    <Spinner
+        android:id="@+id/teamName_id"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+
+        />
+    <Button
+        android:id="@+id/submitButton_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/play_button_design"
+        android:drawableRight="@drawable/send"
+        android:gravity="center_vertical"
+        android:letterSpacing=".1"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:shadowRadius="@integer/material_motion_duration_medium_1"
+        android:text="Submit  "
+        android:textAllCaps="false" />
+
+</LinearLayout>
